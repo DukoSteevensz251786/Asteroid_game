@@ -68,7 +68,7 @@ class GameView(arcade.Window):
  
         self.bullet_list.append(bullet)
 
-    def on_key_press(self, key, modifiers):
+    def on_key_press(self, key):
         if key == arcade.key.ESCAPE:
             self.setup()
         elif key == arcade.key.UP or key == arcade.key.W:
@@ -80,7 +80,7 @@ class GameView(arcade.Window):
         elif key == arcade.key.RIGHT or key == arcade.key.D:
             self.player_sprite.change_x = PLAYER_MOVEMENT_SPEED
  
-    def on_key_release(self, key, modifiers):
+    def on_key_release(self, key):
         if key == arcade.key.UP or key == arcade.key.W:
             self.player_sprite.change_y = 0
         elif key == arcade.key.DOWN or key == arcade.key.S:
